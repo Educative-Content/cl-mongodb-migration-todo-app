@@ -5,7 +5,7 @@ function Create() {
   const [task, setTask] = useState();
   const HandleAdd = () => {
     axios
-      .post('http://localhost:3001/additem', { task: task })
+      .post('http://<Public IPv4>:3000/additem', { task: task })
       .then((result) => {
         location.reload();
       })
