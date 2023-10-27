@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect('mongodb://<EC2_Public_DNS>:27017/test');
+mongoose.connect('mongodb://<DB_Connection_String>:27017/test');
 
 app.post('/additem', (req, res) => {
   const task = req.body.task;
